@@ -1,0 +1,52 @@
+body {
+    background-color: beige;
+}
+* {
+    box-sizing: border-box;
+}
+article {
+    width: 100%;
+    height: 80vh;
+}
+header {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    z-index: 1; /* Ensure header is above the background image */
+    padding: 20px 130px;
+}
+
+.logo {
+    height: 130px;
+    position: absolute;
+    top: -10px;
+    left: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0; /* Optional: Add some padding for better spacing */
+    border-radius: 10px;
+    padding: 10px;
+    margin: 16px 0px;
+    gap: 10px;
+}
+
+nav ul li {
+    border-radius: 10px;
+    padding-inline: 20px;
+    padding-block: 10px;
+    font-family: "Poppins";
+    font-weight: 500px;
+}
+
+nav ul :nth-child(5){
+    border: 1px solid #1ccb8c;
+}
+
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* Change text color to white for visibility */
+}

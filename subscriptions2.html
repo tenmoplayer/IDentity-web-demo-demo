@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="headerfooter.css">
+   <link rel="stylesheet" href="subscription.css">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <header id="section1">
+    <img class="logo" src="logo3.png" alt="Logo">
+<nav>
+    <ul>
+        <li><a href="Untitled-1.html#section1">HOME</a></li>
+        <li><a href="Untitled-1.html#section2">ABOUT</a></li>
+        <li><a href="subscriptions2.html">SERVICES</a></li>
+        <li><a href="Untitled-1.html#section6">CONTACT</a></li>
+        <li><a href="getstarted.html" class="btn">Subscribe</a></li>
+
+    </ul>
+</nav>
+</header>
+
+
+
+
+
+
+
+    <article class="a1">
+        <div class="mainContainer">
+            <h2 style="font-size: 50px;">CONTRACT-BASED</h2>
+            <p style="font-size: 25px;">Everything you need, without limits.</p>
+
+            <div class="cardContainer">
+                <div class="packageCard">
+                    <h3 style="text-align: center; font-size: 50px; margin-top: -45px;">Service</h3><br>
+                    <hr style="margin-top: -20px;">
+
+                  <div></div>
+
+                    <h1><span>₱</span>25,799</h1>
+                    
+                    
+                    <ul>
+                        <li><span><img src="greencheck.png" alt=""></span> Biometric Authentication  </li>
+                        <div>Secure ATM transactions with fingerprint and voice recognition, ensuring only authorized users can complete transactions.</div>
+                        <br>
+
+                        <li><span><img src="greencheck.png" alt=""></span> Real-Time Audio Recording</li>
+                        <div> Automatically records every transaction session, providing clear, tamper-proof evidence of the entire process.
+                        </div>
+                        <br>
+
+                        <li><span><img src="greencheck.png" alt=""></span> Advanced Data Backup</li>
+                        <div> Built-in Micro SD integration for secure data recovery, even during unexpected system failures.
+                        </div>
+                        <br>
+
+                        <li><span><img src="greencheck.png" alt=""></span> 24/7 Monitoring & Threat Alerts</li>
+                        <div>Continuous system monitoring, with instant alerts for potential threats, ensuring your operations are protected around the clock</div>
+                        <br>
+
+                        <li><span><img src="greencheck.png" alt=""></span>  Seamless Integration</li>
+                        <div>Works effortlessly with your existing banking infrastructure, scaling easily across multiple branches or ATMs.
+                        </div>
+                    </ul>
+                    
+                    <div class="get-started-btn"><a href="http://localhost/ils-expo/php1/index.php">Get Started</a></div>
+                </div>
+                
+            </div>
+
+        </div>
+
+
+<!-- Sign In / Sign Up Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <div id="authContainer"></div>
+  </div>
+</div>
+
+  
+
+  <script>
+    const modal = document.getElementById('subscriptionModal');
+    const openBtns = document.querySelectorAll('.get-started-btn');
+    const closeBtn = document.getElementById('closeModal');
+  
+    openBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        modal.style.display = 'flex';
+      });
+    });
+  
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+  
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+      const userIcon = document.getElementById("userIcon");
+    
+      if (userIcon) {
+        userIcon.src = isLoggedIn ? "usericon_loggedin.png" : "usericon.png";
+    
+        userIcon.addEventListener("click", function () {
+          const currentState = localStorage.getItem("isLoggedIn") === "true";
+          localStorage.setItem("isLoggedIn", !currentState);
+          userIcon.src = currentState ? "usericon.png" : "usericon_loggedin.png";
+          alert(currentState ? "Logged out!" : "Logged in!");
+        });
+      }
+    });
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+  
+
+    </article>
+</header>
+</body>
+</html>

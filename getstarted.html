@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Upgrade to Plus</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f3f4f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      padding: 24px;
+      width: 720px;
+      display: flex;
+      gap: 32px;
+    }
+
+    .left, .right {
+      flex: 1;
+    }
+
+    h2 {
+      margin: 0 0 6px;
+      font-size: 20px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    input[type="text"], input[type="number"], select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      margin-bottom: 14px;
+      font-size: 14px;
+    }
+
+    .flex-row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .pay-method {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .pay-method button {
+      flex: 1;
+      padding: 8px;
+      border: none;
+      background: #f3f4f6;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .pay-method button.active {
+      background: white;
+      border: 1px solid #3b82f6;
+    }
+
+    .right .section {
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      padding: 14px;
+      margin-bottom: 16px;
+    }
+
+    .radio-option {
+      display: flex;
+      align-items: center;
+      padding: 8px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .radio-option input {
+      margin-right: 10px;
+    }
+
+    .radio-option.active {
+      border-color: #3b82f6;
+      background-color: #eff6ff;
+    }
+
+    .radio-option span {
+      font-size: 14px;
+    }
+
+    .addon-box label {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 500;
+      gap: 8px;
+    }
+
+    .addon-box p {
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: 4px;
+    }
+
+    .total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .btn-upgrade {
+      background-color: #3b82f6;
+      color: white;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .terms {
+      text-align: center;
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 8px;
+    }
+
+    .terms a {
+      color: #2563eb;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Left Column -->
+    <div class="left">
+      <h2>Upgrade to Plus</h2>
+      <p class="subtitle"></p>
+
+      <label>Billed to</label>
+      <input type="text" value="" />
+
+      <input type="text" value="" />
+
+      <label>Payment details</label>
+      <div class="pay-method">
+        <button class="active">Card</button>
+        <button>Bank</button>
+      </div>
+
+      <input type="text" value="" />
+
+      <div class="flex-row">
+        <input type="text" value="" />
+        <input type="text" value="" />
+      </div>
+
+      <select>
+        <option>United States</option>
+        <option>Philippines</option>
+      </select>
+      <input type="text" placeholder="ZIP code" />
+
+      <p class="terms">
+        By providing your card information, you allow 123done to charge your card for future payments in accordance with their terms.
+      </p>
+    </div>
+
+    <!-- Right Column -->
+    <div class="right">
+      <div class="section">
+        <div class="radio-option active">
+          <input type="radio" name="billing" checked />
+          <span>Pay monthly - $10 / month / member</span>
+        </div>
+        <div class="radio-option">
+          <input type="radio" name="billing" />
+          <span>Pay annually - <span style="color:green">Save 20%</span> $8 / month / member</span>
+        </div>
+      </div>
+
+      <div class="section addon-box">
+        <label>
+          <input type="checkbox" checked /> AI ✨ - $10 / month / member
+        </label>
+        <p>Unlimited use of AI for Q&A, Autofill, Writer, and more.</p>
+      </div>
+
+      <div class="total">
+        <span>$20 / month</span>
+        <button class="btn-upgrade">&#9889; Upgrade to Plus</button>
+      </div>
+
+      <p class="terms">
+        By continuing, you agree to the <a href="#">Terms and Conditions</a>.
+      </p>
+    </div>
+  </div>
+</body>
+</html>

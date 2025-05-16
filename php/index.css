@@ -1,0 +1,108 @@
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fc;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container for login */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Login content styling */
+.login-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Welcome message */
+.welcome-message {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.welcome-message h1 {
+  font-size: 28px;
+  color: #333;
+}
+
+.welcome-message .subtitle {
+  font-size: 16px;
+  color: #777;
+}
+
+/* Error message styling */
+.error-message {
+  color: #ff4d4d;
+  background-color: #f8d7da;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+}
+
+/* Login form styling */
+.login-form form {
+  width: 100%;
+}
+
+.login-table {
+  width: 100%;
+  margin-top: 20px;
+  border-spacing: 10px;
+}
+
+.login-table td {
+  padding: 5px;
+}
+
+.login-table label {
+  font-size: 14px;
+  color: #333;
+  display: block;
+}
+
+.login-table input {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.login-table button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-table button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .login-content {
+    padding: 20px;
+  }
+
+  .login-table button {
+    font-size: 14px;
+  }
+}
