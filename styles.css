@@ -967,3 +967,100 @@
     }
   }
   
+  @media (max-width: 768px) {
+  /* Header */
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  /* Section layouts */
+  .event-description-section,
+  .event-description-section1 {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .divleft, .divleft1,
+  .divimgright, .divimgrigh1t {
+    width: 100%;
+  }
+
+  .divimgright img,
+  .divimgrigh1t img {
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  /* Subscription Section */
+  .subscribe-container .sub-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .subscribe-container .left,
+  .subscribe-container .lock-icon {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .subscribe-form input[type="email"] {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+
+  .subscribe-form button {
+    width: 90%;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer-section,
+  .footer-section1,
+  .address {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .footer-section .namemail {
+    flex-direction: column;
+  }
+
+  .footer-section .name,
+  .footer-section .mail {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Icons footer */
+  .footer2 .icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  /* Modal adjustments */
+  .modal-content {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
