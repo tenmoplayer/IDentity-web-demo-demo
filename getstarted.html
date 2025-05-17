@@ -11,104 +11,125 @@
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f3f4f6;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
       display: flex;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
+      padding: 24px;
+      color: #111827;
     }
 
     .container {
       background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      padding: 24px;
-      width: 720px;
+      border-radius: 16px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+      padding: 32px;
+      width: 90%;
+      max-width: 960px;
       display: flex;
-      gap: 32px;
+      flex-wrap: wrap;
+      gap: 40px;
     }
 
     .left, .right {
-      flex: 1;
+      flex: 1 1 320px;
     }
 
     h2 {
-      margin: 0 0 6px;
-      font-size: 20px;
+      font-size: 26px;
+      margin-bottom: 10px;
     }
 
     .subtitle {
-      font-size: 14px;
+      font-size: 15px;
       color: #6b7280;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
 
     label {
       display: block;
+      font-weight: 600;
+      margin: 12px 0 6px;
       font-size: 14px;
-      font-weight: 500;
-      margin-bottom: 4px;
     }
 
     input[type="text"], input[type="number"], select {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       border: 1px solid #d1d5db;
-      border-radius: 6px;
-      margin-bottom: 14px;
-      font-size: 14px;
+      border-radius: 8px;
+      font-size: 15px;
+      background-color: #f9fafb;
+      transition: 0.2s ease;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: #2563eb;
+      background-color: white;
     }
 
     .flex-row {
       display: flex;
-      gap: 10px;
+      gap: 12px;
     }
 
     .pay-method {
       display: flex;
-      gap: 16px;
-      margin-bottom: 12px;
+      gap: 12px;
+      margin: 16px 0;
     }
 
     .pay-method button {
       flex: 1;
-      padding: 8px;
-      border: none;
-      background: #f3f4f6;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .pay-method button.active {
-      background: white;
-      border: 1px solid #3b82f6;
-    }
-
-    .right .section {
+      padding: 10px;
+      background-color: #f3f4f6;
       border: 1px solid #d1d5db;
-      border-radius: 10px;
-      padding: 14px;
-      margin-bottom: 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    .pay-method button:hover {
+      background-color: #e5e7eb;
+    }
+
+    .pay-method .active {
+      background-color: #e0f2fe;
+      border-color: #3b82f6;
+      color: #1d4ed8;
+    }
+
+    .section {
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 18px;
+      background-color: #f9fafb;
+      margin-bottom: 20px;
     }
 
     .radio-option {
       display: flex;
       align-items: center;
-      padding: 8px;
+      gap: 10px;
       border: 1px solid #d1d5db;
-      border-radius: 8px;
-      margin-bottom: 10px;
+      border-radius: 10px;
+      padding: 12px;
+      margin-bottom: 12px;
+      transition: 0.2s;
       cursor: pointer;
     }
 
-    .radio-option input {
-      margin-right: 10px;
+    .radio-option:hover {
+      background-color: #f3f4f6;
     }
 
     .radio-option.active {
-      border-color: #3b82f6;
+      border-color: #2563eb;
       background-color: #eff6ff;
     }
 
@@ -116,52 +137,43 @@
       font-size: 14px;
     }
 
-    .addon-box label {
-      display: flex;
-      align-items: center;
-      font-size: 14px;
-      font-weight: 500;
-      gap: 8px;
+    .btn-upgrade {
+      background-color: #10b981;
+      color: white;
+      padding: 14px 26px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
     }
 
-    .addon-box p {
-      font-size: 13px;
-      color: #6b7280;
-      margin-top: 4px;
+    .btn-upgrade:hover {
+      background-color: #059669;
     }
 
     .total {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: bold;
-      font-size: 18px;
-      margin-top: 10px;
-    }
-
-    .btn-upgrade {
-      background-color: #3b82f6;
-      color: white;
-      padding: 10px 18px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 6px;
+      margin-top: 18px;
     }
 
     .terms {
-      text-align: center;
       font-size: 12px;
       color: #6b7280;
-      margin-top: 8px;
+      margin-top: 20px;
+      text-align: center;
     }
 
     .terms a {
       color: #2563eb;
       text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 20px;
+      }
     }
   </style>
 </head>
@@ -170,34 +182,42 @@
     <!-- Left Column -->
     <div class="left">
       <h2>Upgrade to Plus</h2>
-      <p class="subtitle"></p>
+      <p class="subtitle">Get access to premium features by upgrading your account.</p>
 
-      <label>Billed to</label>
-      <input type="text" value="" />
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" />
 
-      <input type="text" value="" />
+      <label for="email">Email Address</label>
+      <input type="text" id="email" />
 
-      <label>Payment details</label>
+      <label>Payment Method</label>
       <div class="pay-method">
         <button class="active">Card</button>
         <button>Bank</button>
       </div>
 
-      <input type="text" value="" />
+      <label for="card">Card Number</label>
+      <input type="text" id="card" /> 
 
       <div class="flex-row">
-        <input type="text" value="" />
-        <input type="text" value="" />
+        <input type="text" />
+        <input type="text" />
       </div>
 
-      <select>
-        <option>United States</option>
+      <label for="country">Country</label>
+      <select id="country">
+        <option value="">-- Select Country --</option>
         <option>Philippines</option>
+        <option>United States</option>
+        <option>Canada</option>
+        <option>Australia</option>
       </select>
-      <input type="text" placeholder="ZIP code" />
+
+      <label for="zip">ZIP Code</label>
+      <input type="text" id="zip" />
 
       <p class="terms">
-        By providing your card information, you allow 123done to charge your card for future payments in accordance with their terms.
+        By providing your card info, you agree to allow InnovaTech to charge your card for future payments according to our <a href="#">Terms</a>.
       </p>
     </div>
 
@@ -205,30 +225,18 @@
     <div class="right">
       <div class="section">
         <div class="radio-option active">
-          <input type="radio" name="billing" checked />
-          <span>Pay monthly - $10 / month / member</span>
+          <input type="radio" name="plan" checked />
+          <span><strong>Monthly</strong> – $10/month per member</span>
         </div>
         <div class="radio-option">
-          <input type="radio" name="billing" />
-          <span>Pay annually - <span style="color:green">Save 20%</span> $8 / month / member</span>
+          <input type="radio" name="plan" />
+          <span><strong>Annually</strong> – $8/month (Save 20%)</span>
         </div>
-      </div>
-
-      <div class="section addon-box">
-        <label>
-          <input type="checkbox" checked /> AI ✨ - $10 / month / member
-        </label>
-        <p>Unlimited use of AI for Q&A, Autofill, Writer, and more.</p>
       </div>
 
       <div class="total">
-        <span>$20 / month</span>
-        <button class="btn-upgrade">&#9889; Upgrade to Plus</button>
+        <button class="btn-upgrade">Subscribe Now</button>
       </div>
-
-      <p class="terms">
-        By continuing, you agree to the <a href="#">Terms and Conditions</a>.
-      </p>
     </div>
   </div>
 </body>

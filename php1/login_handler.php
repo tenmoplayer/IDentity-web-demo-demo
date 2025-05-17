@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     header("Location: ../php/admin.php");
                     break;
                 default:
-                    header("Location: ../Untitled-1.html");
+                    header("Location: ../index.html");
                     break;
             }
             exit();

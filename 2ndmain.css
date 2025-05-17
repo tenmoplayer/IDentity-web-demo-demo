@@ -106,7 +106,7 @@ nav a {
     height: 100vh; /* Full height */
     z-index: 0; /* Behind the header */
     background-color: rgba(173, 216, 230, 0.7); /* Light blue with 70% opacity */
-    background-image: url(background.png);
+    background-image: url(BG2.png);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -969,5 +969,6 @@ height: auto;
     border-radius: 50%;
     margin-top: -20px;
    object-fit: cover;
+   
 }
 
